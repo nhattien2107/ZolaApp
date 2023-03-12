@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZolaApp.Views.RegisterPage"
+             xmlns:viewmodels="clr-namespace:ZolaApp.ViewModels" 
+             x:DataType="viewmodels:LoginViewModel"
+             Shell.NavBarIsVisible="false"
+             Shell.FlyoutBehavior="Disabled">
+    <ContentPage.BindingContext>
+        <viewmodels:LoginViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="TitleBigTextStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="30" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontFamily" Value="Metropolis Medium" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+
+            </Style>
+
+            <Style x:Key="TitleTextStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontFamily" Value="AC"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+            <Style x:Key="EntryTextStyle" TargetType="Entry">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="Margin" Value="0, 20, 0, 0"/>
+                <Setter Property="PlaceholderColor" Value="White"/>
+            </Style>
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BackgroundColor" Value="#9a9fed"/>
+                <Setter Property="CornerRadius" Value="10"/>
+                <Setter Property="FontFamily" Value="AC"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView
+            BackgroundColor="White">
+            <Grid
+                RowDefinitions="Auto, *">
+                <Grid
+                     Grid.Row="0" HeightRequest="200">
+                    <Image Source="Logo.PMG" VerticalOptions="CenterAndExpand" Aspect="AspectFit" Margin="0,0,0,0"/>
+                </Grid>
+                <Grid
+                    Grid.Row="1">
+                    <BoxView Color="{StaticResource Primary}"
+                            CornerRadius="24, 24, 0, 0"
+                             Margin="0, 0, -50, 0"/>
+                    <Grid RowDefinitions="Auto,Auto, Auto, Auto, Auto" RowSpacing="25" Margin="40">
+                        <Grid Grid.Row="0" Margin="0,0,0,0">
+                            <Label Grid.Row="0" Text="Back to Login" HorizontalOptions="Start"
+                               Style="{StaticResource TitleTextStyle}">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="BackToLogin_Tapped"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <Label Grid.Row="1" Text="Register Now"                       
+                                            Style="{StaticResource TitleBigTextStyle}"/>
+                        </Grid>
+                        <Label Grid.Row="1" Text="Username:"                       
+                                            Style="{StaticResource TitleTextStyle}"/>
+                        <Entry Grid.Row="1" Placeholder="Username"                                            
+                                            Text="{Binding User.Username}" 
+                                            Style="{StaticResource EntryTextStyle}"/>
+                        <Label Grid.Row="2" Text="Password:" 
+                                            Style="{StaticResource TitleTextStyle}"/>
+                        <Entry Grid.Row="2" IsPassword="True" 
+                                            Placeholder="Password"                                             
+                                            Text="{Binding User.Password}"  
+                                            Style="{StaticResource EntryTextStyle}"/>
+                        <Label Grid.Row="3" Text="Email:"                       
+                                            Style="{StaticResource TitleTextStyle}"/>
+                        <Entry Grid.Row="3" Placeholder="Email"                                             
+                                            Text="{Binding User.Email}" 
+                                            Style="{StaticResource EntryTextStyle}"/>
+                        
+                        <Button Grid.Row="4" Text="Register" Command="{Binding LoginCommand}" 
+                                             Style="{StaticResource ButtonStyle}"/>
+                    </Grid>
+                    
+                </Grid>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZolaApp.Resources.Colors">
+
+    <Color x:Key="AccentColor">#5856D6</Color>
+    <Color x:Key="SecondaryAccentColor">#BFD0FB</Color>
+    <!--<Color x:Key="PrimaryColor">White</Color>-->
+    <OnPlatform x:TypeArguments="Color" x:Key="PrimaryColor">
+        <On Platform="iOS" Value="#5B61B9"/>
+        <On Platform="Android" Value="#5B61B9"/>
+    </OnPlatform>
+    <!--<Color x:Key="PrimaryColor">#F4F5F9</Color>-->
+    <Color x:Key="LightDarkWhite">#F4F5F9</Color>
+    <Color x:Key="PrimaryTextColor">#303C5E</Color>
+    <Color x:Key="SecondaryTextColor">#979DAB</Color>
+    <Color x:Key="ConnectedColor">#4fc84a</Color>
+
+    <Color x:Key="Primary">#5B61B9</Color>
+    <Color x:Key="PrimaryLight">#9a9fed</Color>
+    <Color x:Key="TextColor">#000000</Color>
+    <Color x:Key="TextColorDark">White</Color>
+    <Color x:Key="ElegantDarkColor">#D3D3D3</Color>
+    <Color x:Key="WindowBackgroundColor">#f2f2f7</Color>
+    <Color x:Key="WindowBackgroundColorDark">Black</Color>
+    <Color x:Key="SecondaryColor">White</Color>
+
+    <Color x:Key="CardBackground">White</Color>
+    <Color x:Key="CardBackgroundDark">#1C1C1E</Color>
+
+    <Color x:Key="SystemBlue">#007AFF</Color>
+    <Color x:Key="SystemGreen">#34C759</Color>
+    <Color x:Key="SystemIndigo">#5856D6</Color>
+    <Color x:Key="SystemOrange">#FF9500</Color>
+    <Color x:Key="SystemPink">#FF2D55</Color>
+    <Color x:Key="SystemPurple">#AF52DE</Color>
+    <Color x:Key="SystemRed">#FF3B30</Color>
+    <Color x:Key="SystemTeal">#5AC8FA</Color>
+    <Color x:Key="SystemYellow">#FFCC00</Color>
+
+    <Color x:Key="SystemGray">#8E8E93</Color>
+    <Color x:Key="SystemGray2">#AEAEB2</Color>
+    <Color x:Key="SystemGray3">#C7C7CC</Color>
+    <Color x:Key="SystemGray4">#D1D1D6</Color>
+    <Color x:Key="SystemGray5">#E5E5EA</Color>
+    <Color x:Key="SystemGray6">#F2F2F7</Color>
+
+    <Color x:Key="SystemBlueDark">#0A84FF</Color>
+    <Color x:Key="SystemGreenDark">#30D158</Color>
+    <Color x:Key="SystemIndigoDark">#5E5CE6</Color>
+    <Color x:Key="SystemOrangeDark">#FF9F0A</Color>
+    <Color x:Key="SystemPinkDark">#FF375F</Color>
+    <Color x:Key="SystemPurpleDark">#BF5AF2</Color>
+    <Color x:Key="SystemRedDark">#FF453A</Color>
+    <Color x:Key="SystemTealDark">#64D2FF</Color>
+    <Color x:Key="SystemYellowDark">#FFD60A</Color>
+
+    <Color x:Key="SystemGrayDark">#8E8E93</Color>
+    <Color x:Key="SystemGray2Dark">#636366</Color>
+    <Color x:Key="SystemGray3Dark">#484848</Color>
+    <Color x:Key="SystemGray4Dark">#3A3A3C</Color>
+    <Color x:Key="SystemGray5Dark">#2C2C2E</Color>
+    <Color x:Key="SystemGray6Dark">#1C1C1E</Color>
+
+</ResourceDictionary>
